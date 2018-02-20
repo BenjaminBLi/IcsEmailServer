@@ -4,23 +4,16 @@
     <bookmark url="file://$PROJECT_DIR$/src/Tester.java" line="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="601bef7d-7a8c-487f-886b-e216a8f324bf" name="Default" comment="Updated practically everything">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Error.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Init.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Testing.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/TestingFeb8.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/TestingStuff.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Utils.java" />
+    <list default="true" id="601bef7d-7a8c-487f-886b-e216a8f324bf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/_messages.txt" afterPath="$PROJECT_DIR$/_messages.txt" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Globals.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Message.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Tester.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/AvailableList.java" afterPath="$PROJECT_DIR$/src/AvailableList.java" />
-      <change beforePath="$PROJECT_DIR$/src/FileIO.java" afterPath="$PROJECT_DIR$/src/FileIO.java" />
-      <change beforePath="$PROJECT_DIR$/src/Globals.java" afterPath="$PROJECT_DIR$/src/Globals.java" />
-      <change beforePath="$PROJECT_DIR$/src/Message.java" afterPath="$PROJECT_DIR$/src/Message.java" />
-      <change beforePath="$PROJECT_DIR$/src/Tester.java" afterPath="$PROJECT_DIR$/src/Tester.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/EmailServer.class" afterPath="$PROJECT_DIR$/out/production/Server/EmailServer.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/FileIO.class" afterPath="$PROJECT_DIR$/out/production/Server/FileIO.class" />
+      <change beforePath="$PROJECT_DIR$/src/Error.java" afterPath="$PROJECT_DIR$/src/Error.java" />
+      <change beforePath="$PROJECT_DIR$/src/Init.java" afterPath="$PROJECT_DIR$/src/Init.java" />
+      <change beforePath="$PROJECT_DIR$/src/Testing.java" afterPath="$PROJECT_DIR$/src/Testing.java" />
+      <change beforePath="$PROJECT_DIR$/src/TestingFeb8.java" afterPath="$PROJECT_DIR$/src/TestingFeb8.java" />
+      <change beforePath="$PROJECT_DIR$/src/TestingStuff.java" afterPath="$PROJECT_DIR$/src/TestingStuff.java" />
+      <change beforePath="$PROJECT_DIR$/src/Utils.java" afterPath="$PROJECT_DIR$/src/Utils.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +38,8 @@
       <file leaf-file-name="Message.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
-              <caret line="105" column="56" lean-forward="true" selection-start-line="105" selection-start-column="56" selection-end-line="105" selection-end-column="56" />
+            <state relative-caret-position="725">
+              <caret line="111" column="21" lean-forward="false" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -411,12 +404,20 @@
       <workItem from="1517939384541" duration="1514000" />
       <workItem from="1518117932615" duration="3176000" />
       <workItem from="1519058812552" duration="415000" />
-      <workItem from="1519148591422" duration="2361000" />
+      <workItem from="1519148591422" duration="2396000" />
     </task>
+    <task id="LOCAL-00001" summary="Updated practically everything">
+      <created>1519150959497</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1519150959497</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34747000" />
+    <option name="totallyTimeSpent" value="34782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-14" width="3200" height="1814" extended-state="6" />
@@ -770,8 +771,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="105" column="56" lean-forward="true" selection-start-line="105" selection-start-column="56" selection-end-line="105" selection-end-column="56" />
+        <state relative-caret-position="725">
+          <caret line="111" column="21" lean-forward="false" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="21" />
           <folding />
         </state>
       </provider>
