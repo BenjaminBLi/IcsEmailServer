@@ -4,7 +4,8 @@ public class Tester{
 	    Message c = new Message();
 	    int error = FileIO.openMessagesFile(Globals.MESSAGES_FILE);
         if(error == Globals.PROCESS_OK){
-            c.deleteFromMessagesFile(0);
+            c.deleteFromMessagesFile(5);
+            System.out.println(Globals.availableList);
         }
         FileIO.closeMessagesFile();
     }

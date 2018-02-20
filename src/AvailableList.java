@@ -24,7 +24,7 @@ public class AvailableList {
 
     public int getNextRecord(){
         if(this.head == null){
-            return Globals.AVAILABLE_LIST_EMPTY;
+            return Globals.EMPTY_AVAILABLE_LIST;
         }else{
             int rec = this.head.getRecordNumber();
             this.head = this.head.getNext();
