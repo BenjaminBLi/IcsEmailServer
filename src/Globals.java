@@ -49,4 +49,20 @@ public class Globals {
     public static final char SERVER_SHUTDOWN = 'Q';
 
     public static final int INT_LEN = 4;
+
+    public static final int SENDING_ATTEMPTS_LIMIT = 1000;
+    public static final int END_OF_MESSAGES_TRANSMISSION = -2;
+
+    public static final int MNIMUM_TIME_BETWEEN_REQUESTS_OF_SAME_MACHINE = 500;
+
+    public static final String UNLISTED = "_unlisted";
+    public static final String UNKNOWN_IP_ADDRESS = "Unknown IP address";
+
+    public static Tree senderIndex = null;
+    public static Tree receiverIndex = null;
+
+    public static String[] accounts = null;
+
+    public static final int SENDER_ID = 0;
+    public static final int RECEIVER_ID = 1;
 }

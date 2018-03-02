@@ -87,6 +87,14 @@ public class Message {
         this.subject = subject;
     }
 
+    public String getIdSenderFirst(){
+        return getSender() + getReceiver() + getDateTime();
+    }
+
+    public String getIdReceiverFirst(){
+        return getReceiver() + getSender() + getDateTime();
+    }
+
     public void readFromMessagesFile(int recordNumber) {
 		String data = "";
 		Record record = new Record();
