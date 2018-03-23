@@ -16,8 +16,14 @@ public class EmailServer {
             TNode p = null;
             TNode q = null;
 
+            p = (Globals.senderIndex.findNode("JBOND0007SUZIECUTE00000000"));
 
-            System.out.println(Globals.senderIndex.findNode("JBOND0007SUZIECUTE00000000"));
+            recordNumber = p.getRecordNumber();
+
+            message.readFromMessagesFile(recordNumber);
+
+            System.out.println(message);
+
         }else{
             Error.report(0);
         }

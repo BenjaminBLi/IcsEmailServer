@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="601bef7d-7a8c-487f-886b-e216a8f324bf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/_messages.dat" afterPath="$PROJECT_DIR$/_messages.dat" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/EmailServer.class" afterPath="$PROJECT_DIR$/out/production/Server/EmailServer.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Globals.class" afterPath="$PROJECT_DIR$/out/production/Server/Globals.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Init.class" afterPath="$PROJECT_DIR$/out/production/Server/Init.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Message.class" afterPath="$PROJECT_DIR$/out/production/Server/Message.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Testing.class" afterPath="$PROJECT_DIR$/out/production/Server/Testing.class" />
       <change beforePath="$PROJECT_DIR$/src/EmailServer.java" afterPath="$PROJECT_DIR$/src/EmailServer.java" />
-      <change beforePath="$PROJECT_DIR$/src/Globals.java" afterPath="$PROJECT_DIR$/src/Globals.java" />
-      <change beforePath="$PROJECT_DIR$/src/Init.java" afterPath="$PROJECT_DIR$/src/Init.java" />
-      <change beforePath="$PROJECT_DIR$/src/Message.java" afterPath="$PROJECT_DIR$/src/Message.java" />
-      <change beforePath="$PROJECT_DIR$/src/TNode.java" afterPath="$PROJECT_DIR$/src/TNode.java" />
-      <change beforePath="$PROJECT_DIR$/src/Testing.java" afterPath="$PROJECT_DIR$/src/Testing.java" />
-      <change beforePath="$PROJECT_DIR$/src/Tree.java" afterPath="$PROJECT_DIR$/src/Tree.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,6 +12,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Server" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -58,7 +49,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tree.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tree.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tree.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
@@ -123,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmailServer.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EmailServer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/EmailServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="576">
+              <caret line="24" column="38" lean-forward="false" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -453,7 +444,7 @@
       <workItem from="1521650510792" duration="44000" />
       <workItem from="1521650716416" duration="4134000" />
       <workItem from="1521828088164" duration="191000" />
-      <workItem from="1521828309047" duration="1062000" />
+      <workItem from="1521828309047" duration="2979000" />
     </task>
     <task id="LOCAL-00001" summary="Updated practically everything">
       <created>1519150959497</created>
@@ -483,11 +474,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520016641652</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updated from March 23 class.">
+      <created>1521829395654</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1521829395654</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56975000" />
+    <option name="totallyTimeSpent" value="58892000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="22" y="6" width="3156" height="1772" extended-state="6" />
@@ -506,7 +504,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0978399" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0978399" sideWeight="0.49621212" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -514,7 +512,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0978399" sideWeight="0.5037879" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -563,7 +561,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated practically everything" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated practically everything" />
+    <MESSAGE value="Updated from March 23 class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated from March 23 class." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -869,14 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EmailServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -892,6 +883,14 @@
             <element signature="e#390#391#0" expanded="true" />
             <element signature="e#422#423#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EmailServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="24" column="38" lean-forward="false" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
