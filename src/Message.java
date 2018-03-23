@@ -104,6 +104,7 @@ public class Message {
 			recordNumber = record.getNext();
 		} while (recordNumber != Globals.END_OF_MESSAGE);
 		text = data;
+		setMessage(text);
 	}
 
 	public int writeToMessagesFile(){

@@ -39,12 +39,12 @@ public class TNode {
         this.right = right;
     }
 
-    public int getRecordNumber() {
-        return recordNumber;
+    public String getIdentification() {
+        return this.identification;
     }
 
-    public String getIdentification() {
-        return identification;
+    public int getRecordNumber() {
+        return recordNumber;
     }
 
     public TNode getLeft() {

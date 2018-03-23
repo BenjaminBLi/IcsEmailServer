@@ -1,3 +1,7 @@
+import java.io.RandomAccessFile;
+import java.util.Random;
+import java.util.RandomAccess;
+
 /*
  * Will eventually be an AVL Tree
  */
@@ -83,6 +87,124 @@ public class Tree {
             return null;
         }
         return null;
+    }
+
+    public TNode findNode(String partialKey, int where){
+        if(partialKey.length() == Globals.IDENTIFICATION_LEN){
+            return findNode(partialKey);
+        } else if(root == null){
+            return null;
+        }
+        int n = partialKey.length();
+        if(partialKey.compareTo(root.getIdentification().substring(0, n)) < 0){
+            Tree t = new Tree(root.getLeft());
+            return t.findNode(partialKey, where);
+        } else if(partialKey.compareTo(root.getIdentification().substring(0, n)) > 0){
+            Tree t = new Tree(root.getRight());
+            return t.findNode(partialKey, where);
+        } else {
+            TNode p = root;
+            if(where == 0){
+                TNode q = p.getLeft();
+                while(q != null){
+                    if(q.getIdentification().substring(0, n).equals(partialKey)){
+                        p = q;
+                        q = q.getLeft();
+                    } else {
+                        q = q.getRight();
+                    }
+                }
+            } else {
+                TNode q = p.getRight();
+                while(q != null){
+                    if(q.getIdentification().substring(0, n).equals(partialKey)){
+                        p = q;
+                        q = q.getRight();
+                    } else {
+                        q = q.getLeft();
+                    }
+                }
+            }
+            return p;
+        }
+    }
+
+    public void writeLevel(int level, RandomAccessFile f) {
+        if (level == 0) {
+            try {
+                if (root != null) {
+                    f.write(root.getIdentification().getBytes());
+                    f.writeInt(root.getRecordNumber());
+                }
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        } else if (root != null) {
+            Tree tree = new Tree(root.getLeft());
+            tree.writeLevel(level - 1, f);
+
+            tree = new Tree(root.getRight());
+            tree.writeLevel(level - 1, f);
+        }
+    }
+
+    public int height() {
+        if (this.root == null) {
+            return 0;
+        } else {
+            int maxLevel = 0;
+            Tree tree = new Tree(root.getLeft());
+            maxLevel = tree.height();
+
+            tree = new Tree(root.getRight());
+            int tmp = tree.height();
+            maxLevel = tmp > maxLevel ? tmp : maxLevel;
+
+            return maxLevel + 1;
+        }
+    }
+
+    public void breadthFirstSave(String fileName){
+        try{
+            RandomAccessFile f = new RandomAccessFile(fileName, "rw");
+            f.setLength(0);
+
+            for (int i = 0; i < height(); i++) {
+                    writeLevel(i, f);
+            }
+
+            f.close();
+        }catch (Exception e){
+            System.out.println(e);
+        }
+    }
+
+    public void breadthFirstRetrieve(String fileName){
+        try{
+            RandomAccessFile f = new RandomAccessFile(fileName, "rw");
+
+            int nodes = (int) (f.length() / (Globals.IDENTIFICATION_LEN + Globals.INT_LEN));
+
+            TNode p = null;
+
+            byte identification[] = new byte[Globals.IDENTIFICATION_LEN];
+            String identificationString = Globals.STR_NULL;
+
+            for (int i = 0; i < nodes; i++) {
+                identificationString = Globals.STR_NULL;
+                f.read(identification);
+
+
+                for (int j = 0; j < identification.length; j++) {
+                    identificationString = identificationString + (char) identification[j];
+                }
+
+                p = new TNode(identificationString, f.readInt(), null, null, null);
+                this.insertNode(p);
+            }
+        }catch (Exception e){
+            System.out.println("Couldn't retrieve tree file " + fileName);
+        }
     }
 
     public void printTree(){

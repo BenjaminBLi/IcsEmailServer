@@ -65,4 +65,5 @@ public class Globals {
 
     public static final int SENDER_ID = 0;
     public static final int RECEIVER_ID = 1;
+
 }
