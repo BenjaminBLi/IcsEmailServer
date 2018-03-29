@@ -8,11 +8,11 @@ import java.util.RandomAccess;
 public class Tree {
     private TNode root = null;
 
-    public Tree(){
+    public Tree() {
         this.root = null;
     }
 
-    public Tree(TNode root){
+    public Tree(TNode root) {
         this.root = root;
     }
 
@@ -24,21 +24,21 @@ public class Tree {
         this.root = root;
     }
 
-    public void buildFromMessagesFile(int whatId){
+    public void buildFromMessagesFile(int whatId) {
         int recordNumber = 0;
         Record record = new Record();
         for (recordNumber = 0; recordNumber < Globals.totalRecordsInMessageFile; recordNumber++) {
             record.readFromMessagesFile(recordNumber);
-            if(record.getData().charAt(Globals.FIRST_RECORD_MARKER_POS) == Globals.FIRST_RECORD_MARKER){
+            if (record.getData().charAt(Globals.FIRST_RECORD_MARKER_POS) == Globals.FIRST_RECORD_MARKER) {
                 Message message = new Message();
                 message.readFromMessagesFile(recordNumber);
 
                 String key = Globals.STR_NULL;
-                if(whatId == Globals.SENDER_ID){
+                if (whatId == Globals.SENDER_ID) {
                     key = message.getIdSenderFirst();
-                }else if(whatId == Globals.RECEIVER_ID){
+                } else if (whatId == Globals.RECEIVER_ID) {
                     key = message.getIdReceiverFirst();
-                }else{
+                } else {
                     System.out.println("***INVALID WHATKEY PARAMETER IN buildFromMessagesFile***");
                 }
 
@@ -48,66 +48,66 @@ public class Tree {
         }
     }
 
-    public void insertNode(TNode p){
-        if(this.root == null){
+    public void insertNode(TNode p) {
+        if (this.root == null) {
             root = p;
-        }else if(p.getIdentification().compareTo(root.getIdentification()) < 0){
-            if(root.getLeft() == null){
+        } else if (p.getIdentification().compareTo(root.getIdentification()) < 0) {
+            if (root.getLeft() == null) {
                 root.setLeft(p);
                 p.setParent(root);
-            }else{
+            } else {
                 Tree tree = new Tree(root.getLeft());
                 tree.insertNode(p);
             }
-        }else if(p.getIdentification().compareTo(root.getIdentification()) > 0){
-            if(root.getRight() == null){
+        } else if (p.getIdentification().compareTo(root.getIdentification()) > 0) {
+            if (root.getRight() == null) {
                 root.setRight(p);
                 p.setParent(root);
-            }else{
+            } else {
                 Tree tree = new Tree(root.getRight());
                 tree.insertNode(p);
             }
-        }else{
+        } else {
             System.out.println("Error: attempting to insert an identification that already exists in tree");
         }
     }
 
-    public TNode findNode(String id){
-        if(this.root == null){
+    public TNode findNode(String id) {
+        if (this.root == null) {
             return null;
-        }else if(id.equals(this.root.getIdentification())){
+        } else if (id.equals(this.root.getIdentification())) {
             return this.root;
-        }else if(this.root.getIdentification().compareTo(id) < 0){
+        } else if (this.root.getIdentification().compareTo(id) < 0) {
             Tree t = new Tree(this.root.getLeft());
             t.findNode(id);
-        }else if(this.root.getIdentification().compareTo(id) > 0) {
+        } else if (this.root.getIdentification().compareTo(id) > 0) {
             Tree t = new Tree(this.root.getRight());
             t.findNode(id);
-        }else{
+        } else {
             return null;
         }
         return null;
     }
 
-    public TNode findNode(String partialKey, int where){
-        if(partialKey.length() == Globals.IDENTIFICATION_LEN){
+    public TNode findNode(String partialKey, int where) {
+        if (partialKey.length() == Globals.IDENTIFICATION_LEN) {
             return findNode(partialKey);
-        } else if(root == null){
+        } else if (root == null) {
             return null;
         }
         int n = partialKey.length();
-        if(partialKey.compareTo(root.getIdentification().substring(0, n)) < 0){
+        if (partialKey.compareTo(root.getIdentification().substring(0, n)) < 0) {
             Tree t = new Tree(root.getLeft());
             return t.findNode(partialKey, where);
-        } else if(partialKey.compareTo(root.getIdentification().substring(0, n)) > 0){
+        } else if (partialKey.compareTo(root.getIdentification().substring(0, n)) > 0) {
             Tree t = new Tree(root.getRight());
             return t.findNode(partialKey, where);
         } else {
             TNode p = root;
-            if(where == 0){
+            if (where == 0) {
                 TNode q = p.getLeft();
-                while(q != null){
-                    if(q.getIdentification().substring(0, n).equals(partialKey)){
+                while (q != null) {
+                    if (q.getIdentification().substring(0, n).equals(partialKey)) {
                         p = q;
                         q = q.getLeft();
                     } else {
@@ -116,8 +116,8 @@ public class Tree {
                 }
             } else {
                 TNode q = p.getRight();
-                while(q != null){
-                    if(q.getIdentification().substring(0, n).equals(partialKey)){
+                while (q != null) {
+                    if (q.getIdentification().substring(0, n).equals(partialKey)) {
                         p = q;
                         q = q.getRight();
                     } else {
@@ -164,23 +164,23 @@ public class Tree {
         }
     }
 
-    public void breadthFirstSave(String fileName){
-        try{
+    public void breadthFirstSave(String fileName) {
+        try {
             RandomAccessFile f = new RandomAccessFile(fileName, "rw");
             f.setLength(0);
 
             for (int i = 0; i < height(); i++) {
-                    writeLevel(i, f);
+                writeLevel(i, f);
             }
 
             f.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e);
         }
     }
 
-    public void breadthFirstRetrieve(String fileName){
-        try{
+    public void breadthFirstRetrieve(String fileName) {
+        try {
             RandomAccessFile f = new RandomAccessFile(fileName, "rw");
 
             int nodes = (int) (f.length() / (Globals.IDENTIFICATION_LEN + Globals.INT_LEN));
@@ -202,13 +202,13 @@ public class Tree {
                 p = new TNode(identificationString, f.readInt(), null, null, null);
                 this.insertNode(p);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Couldn't retrieve tree file " + fileName);
         }
     }
 
-    public void printTree(){
-        if(this.root != null){
+    public void printTree() {
+        if (this.root != null) {
             Tree t = new Tree(this.root.getLeft());
             t.printTree();
 
@@ -219,22 +219,85 @@ public class Tree {
         }
     }
 
-    public void printTree(int level){
-        if(this.root != null){
+    public void printTree(int level) {
+        if (this.root != null) {
             Tree t = new Tree(this.root.getLeft());
-            t.printTree(level+1);
+            t.printTree(level + 1);
 
             System.out.println(this.root.toString() + " in level " + level);
 
             t = new Tree(this.root.getRight());
-            t.printTree(level+1);
+            t.printTree(level + 1);
+        }
+    }
+
+    public void setParentsChildLink(TNode p, TNode q) {
+        TNode parent = p.getParent();
+        if (p == parent.getRight()) {
+            parent.setLeft(q);
+        } else if (p == parent.getLeft()) {
+            p.getParent().setRight(q);
+        }
+    }
+
+    public void deleteNode(TNode p) {
+        if (p.isLeaf()) {
+            if (p == root) {
+                root = null;
+            } else {
+                setParentsChildLink(p, null);
+            }
+        } else if (p.getLeft() == null || p.getRight() == null) {
+            TNode q = null;
+            if (p.getLeft() != null) q = p.getLeft();
+            else if (p.getRight() != null) q = p.getRight();
+
+            if (p == root) root = q;
+            else setParentsChildLink(p, q);
+
+            q.setParent(p.getParent());
+        } else {
+            TNode q = p.getLeft();
+            if(q.getRight() == null){
+                if(p == root){
+                    root = q;
+                }else{
+                    setParentsChildLink(p, q);
+                }
+
+                q.setParent(p.getParent());
+                q.setRight(p.getRight());
+                q.setLeft(p.getLeft());
+            }else{
+                q = p.getRight();
+                q.setRight(q.getLeft());
+                if(q.getLeft() != null){
+                    q.getLeft().setParent(q.getParent());
+                }
+
+                if(p == root)
+                    root = q;
+                else
+                    setParentsChildLink(p, q);
+
+                q.setParent(p.getParent());
+                q.setLeft(p.getLeft());
+                p.getLeft().setParent(q);
+                q.setRight(p.getRight());
+                p.getRight().setParent(q);
+
+            }
         }
 
+        p.setLeft(null);
+        p.setRight(null);
+        p.setParent(null);
+        p = null;
     }
 
     @Override
     public String toString() {
-        if(this.root == null) return "Empty Tree";
+        if (this.root == null) return "Empty Tree";
         return this.root.getIdentification();
     }
 }

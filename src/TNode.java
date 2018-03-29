@@ -59,6 +59,10 @@ public class TNode {
         return right;
     }
 
+    public boolean isLeaf(){
+        return left == null && right == null;
+    }
+
     @Override
     public String toString() {
         if(this == null)
