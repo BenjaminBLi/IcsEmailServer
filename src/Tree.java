@@ -234,12 +234,15 @@ public class Tree {
     public void setParentsChildLink(TNode p, TNode q) {
         TNode parent = p.getParent();
         if (p == parent.getRight()) {
-            parent.setLeft(q);
+            parent.setRight(q);
         } else if (p == parent.getLeft()) {
-            p.getParent().setRight(q);
+            parent.setLeft(q);
         }
     }
-
+    public TNode getRightMostNode(TNode curr){
+        if(curr.getRight() == null)return curr;
+        return getRightMostNode(curr.getRight());
+    }
     public void deleteNode(TNode p) {
         if (p.isLeaf()) {
             if (p == root) {
@@ -259,18 +262,20 @@ public class Tree {
         } else {
             TNode q = p.getLeft();
             if(q.getRight() == null){
+                //Case 4, 5a
                 if(p == root){
                     root = q;
-                }else{
+                } else {
                     setParentsChildLink(p, q);
                 }
 
                 q.setParent(p.getParent());
                 q.setRight(p.getRight());
-                q.setLeft(p.getLeft());
-            }else{
-                q = p.getRight();
-                q.setRight(q.getLeft());
+                q.getRight().setParent(q);
+            } else {
+                //Case 5b, 5c
+                q = getRightMostNode(q);
+                q.getParent().setRight(q.getLeft());
                 if(q.getLeft() != null){
                     q.getLeft().setParent(q.getParent());
                 }

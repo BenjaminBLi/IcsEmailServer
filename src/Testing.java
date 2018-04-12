@@ -8,6 +8,7 @@ public class Testing {
         test.insertNode(new TNode("7", 4, null, null, null));
 
         test.printTree();
-        System.out.println(test.height());
+        test.deleteNode(test.findNode("4"));
+        test.printTree();
     }
 }
