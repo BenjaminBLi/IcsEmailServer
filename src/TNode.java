@@ -1,18 +1,20 @@
 public class TNode {
-    private String identification = "";
+    private String _identification = "";
     private int recordNumber = -1;
+    private int height = 0;
     private TNode left = null;
     private TNode right = null;
     private TNode parent = null;
 
     public TNode(){
-        this.identification = "";
+        this._identification = "";
         this.recordNumber = -1;
         this.left = this.right = this.parent = null;
+        this.height = 0;
     }
 
     public TNode(String s, int recordNumber, TNode left, TNode right, TNode parent){
-        this.identification = s;
+        this._identification = s;
         this.recordNumber = recordNumber;
         this.left = left;
         this.right = right;
@@ -28,7 +30,11 @@ public class TNode {
     }
 
     public void setIdentification(String identification) {
-        this.identification = identification;
+        this._identification = identification;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     public void setParent(TNode parent) {
@@ -40,7 +46,11 @@ public class TNode {
     }
 
     public String getIdentification() {
-        return this.identification;
+        return this._identification;
+    }
+
+    public int getHeight() {
+        return height;
     }
 
     public int getRecordNumber() {
@@ -68,6 +78,6 @@ public class TNode {
         if(this == null)
             return "null";
         else
-            return "Id: " + this.identification + " Record number: " + this.recordNumber;
+            return "Id: " + this._identification + " Record number: " + this.recordNumber;
     }
 }

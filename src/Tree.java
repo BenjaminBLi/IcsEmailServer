@@ -70,6 +70,11 @@ public class Tree {
         } else {
             System.out.println("Error: attempting to insert an identification that already exists in tree");
         }
+
+        int leftHeight = root.getLeft() == null ? 0 : root.getLeft().getHeight();
+        int rightHeight = root.getRight() == null ? 0 : root.getRight().getHeight();
+
+        if(root != null) root.setHeight(Math.max(leftHeight, rightHeight) + 1);
     }
 
     public TNode findNode(String id) {
@@ -212,7 +217,7 @@ public class Tree {
             Tree t = new Tree(this.root.getLeft());
             t.printTree();
 
-            System.out.println(this.root.toString());
+            System.out.println(this.root.toString() + " height: " + root.getHeight());
 
             t = new Tree(this.root.getRight());
             t.printTree();
