@@ -1,5 +1,6 @@
 import java.io.*;
 public class Globals {
+
     public static final String MESSAGES_FILE = "_messages.dat";
     public static final String AVAILABLE_LIST_FILE = "_available.dat";
     public static RandomAccessFile msg = null;
@@ -50,20 +51,25 @@ public class Globals {
 
     public static final int INT_LEN = 4;
 
-    public static final int SENDING_ATTEMPTS_LIMIT = 1000;
-    public static final int END_OF_MESSAGES_TRANSMISSION = -2;
-
-    public static final int MNIMUM_TIME_BETWEEN_REQUESTS_OF_SAME_MACHINE = 500;
-
-    public static final String UNLISTED = "_unlisted";
-    public static final String UNKNOWN_IP_ADDRESS = "Unknown IP address";
-
     public static Tree senderIndex = null;
     public static Tree receiverIndex = null;
-
-    public static String[] accounts = null;
 
     public static final int SENDER_ID = 0;
     public static final int RECEIVER_ID = 1;
 
+    //Network Constants
+    public static final String SERVER_IP_ADDRESS = "192.168.2.125";
+    public static String clientIPAddress = STR_NULL;
+    public static final int PORT_NUMBER = 5000;
+    public static final int TIME_OUT = 10000;
+    public static final int NET_OK = 0;
+    public static final int NET_SEND_ERROR = -1;
+    public static final int NET_RECEIVE_ERROR = -2;
+
+    public static final int SENDING_ATTEMPTS_LIMIT = 1000;
+    public static final int END_OF_MESSAGES_TRANSMISSION = -2;
+
+    public static final int MINIMUM_TIME_BETWEEN_REQUESTS_OF_SAME_MACHINE = 50;
+
+    public static String transmissionString = STR_NULL;
 }

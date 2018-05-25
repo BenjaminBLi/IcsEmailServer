@@ -8,7 +8,8 @@ public class Init {
             Globals.receiverIndex = new Tree();
             Globals.senderIndex.buildFromMessagesFile(Globals.SENDER_ID);
 
-            //Globals.accounts = FileIO.retrieveAccounts(Globals.ACCOUNTS_FILE);
+            /*
+            Globals.accounts = FileIO.retrieveAccounts(Globals.ACCOUNTS_FILE);
 	   		if(Globals.accounts != null){
 
 
@@ -17,6 +18,7 @@ public class Init {
 
                 }
 			}
+			*/
 	    } else {
             Error.report(2);
 	    }

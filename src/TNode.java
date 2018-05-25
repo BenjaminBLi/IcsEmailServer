@@ -45,7 +45,7 @@ public class TNode {
         this.right = right;
     }
 
-    public String getIdentification() {
+    public String getId() {
         return this._identification;
     }
 
